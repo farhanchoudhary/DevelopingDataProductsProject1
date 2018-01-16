@@ -1,0 +1,32 @@
+---
+title: "Developing Data Products Assignment 1"
+author: "Farhan Choudhary"
+date: "16 January 2018"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
+
+To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+
+## Example Code
+
+This markdown file contains the code to demonstrate an interactive map that has been created with leaflet. The sourcecode for this file is in my [GitHub Repository](http://www.github.com/farhanchoudhary).
+
+
+```{r tabsets, echo=FALSE}
+library(leaflet)
+
+df <- data.frame(lat = runif(5, min = 28.6, max = 28.8),
+                 lng = runif(5, min = 77.0, max = 77.2))
+
+df %>%
+    leaflet() %>%
+    addTiles() %>%
+    addMarkers()
+```
