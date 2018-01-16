@@ -1,2 +1,2 @@
-# DevelopingDataProductsProject1
-From the Johns Hopkins University class
+# Developing Data Products - All codes for Johns Hopkins University Class
+
